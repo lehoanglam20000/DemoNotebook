@@ -1,0 +1,51 @@
+import matplotlib.pyplot as plt
+import plotly.plotly as py
+import plotly.graph_objs as go
+import csv
+import numpy as np
+import pickle
+import pandas as pd
+
+set = ["A", "B", "C", "D", "E", "F"]
+instance = ["01", "02", "03", "04", "05", "06", "07"]
+
+dir = "C:/Users/psxhll/Documents/NetBeansProjects/adaptiveGA/output/WSRP-"
+hyphen = "-";
+ending = ".csv"
+num_plots =10
+startIndex = 0
+labels = []
+startIndex = 0
+for i in instance:
+    for index in range(startIndex, num_plots):
+        path = dir + hyphen + i + hyphen + i + ending
+        #print(path)
+   
+    
+#data = [[1,2,3], [4,5,6], [7,8,9]]
+
+data = [['0.132s', '3', '4.326312029228036'],
+['0.163s', '4', '4.100582307285952'],
+['0.225s', '5', '3.8290006243096575'],
+['0.263s', '6', '3.7662868721347325'],
+['0.352s', '9', '3.713578919759585']]
+
+data2 = [['3', '4.326312029228036'],
+['4', '4.100582307285952'],
+['5', '3.8290006243096575'],
+['6', '3.7662868721347325'],
+['9', '3.713578919759585']]
+
+data3 = [[3, 4.3],
+         [4, 4.1],
+         [5, 3.8],
+         [6, 3.7],
+         [9, 3.6],
+         ]
+
+plt.plot(data)
+plt.show()
+plt.plot(data2)
+plt.show()
+plt.plot(data3)
+plt.show()
